@@ -1,0 +1,13 @@
+#version 300 es
+
+precision mediump float;
+
+uniform sampler2D s_texture;
+
+in vec2 v_tex_coords;
+
+layout(location = 0) out vec4 out_color;
+
+void main() {
+    out_color = texture(s_texture, v_tex_coords);
+}
